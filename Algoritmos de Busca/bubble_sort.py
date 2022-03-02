@@ -1,16 +1,14 @@
-alist = [54,26,93,17,77,31,44,55,20]
+def bubbleSort(alist):
+    troca = True
+    for passnum in range(len(alist)-1,0,-1):
+        if not troca:
+            break
+        for i in range(passnum):
+            troca = False
+            if alist[i]>alist[i+1]:
+                alist[i], alist[i+1] = alist[i+1], alist[i]
+                troca = True
 
-x = 0
-temp = 0
-trocou = False
-
-while x < len(alist) - 1:
-    if alist[x] > alist[x + 1]:
-        temp = alist[x]
-        alist[x] = alist[x +1]
-        alist[x + 1] = temp
-        trocou = True
-    x += 1
-    print(alist)
-
-
+alist = [1,2,3,4,5,6]
+bubbleSort(alist)
+print(alist)
