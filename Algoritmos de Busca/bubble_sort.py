@@ -1,5 +1,5 @@
 def bubbleSort(alist):
-    troca = True
+    troca = True  # 1 Operador Booleano para fazer o controle da lista já ordenada
     for passnum in range(len(alist)-1,0,-1):
         if not troca:
             break
