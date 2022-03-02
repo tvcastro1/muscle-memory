@@ -11,4 +11,4 @@ def bubbleSort(alist):
 
 alist = [1,2,3,4,5,6]
 bubbleSort(alist)
-print(alis
+print(alist)
