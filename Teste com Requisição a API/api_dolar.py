@@ -5,7 +5,7 @@ cotacao = r.json()
 
 print(cotacao)
 
-print('#### Cotação do Dolar ####')
+print('####Cotação do Dolar####')
 print(cotacao['USD']['low'])
 
 # def main():
