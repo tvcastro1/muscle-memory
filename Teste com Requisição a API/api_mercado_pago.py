@@ -39,7 +39,8 @@ headers = {
 response = requests.get('https://api.mercadopago.com/v1/account/settlement_report/list', headers=headers)
 response_json = response.json()
 json_data = json.loads(response.text)
-print(type(json_data[0]))
+for i in range(len(json_data)):
+    print(json_data[i])
 # dict_response = {(key, value) for x in response_json for key ,value in x.items()}
 # print(response_json)
 # print(dict_response)
