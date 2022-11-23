@@ -56,16 +56,62 @@ class ContaEspecial(Conta):
             self.operacoes.append(["SAQUE", valor])
 
 
-joao = Cliente("João da Silva", "777-1234")
-maria = Cliente("Maria da Silva", "555-4321")
-conta1 = Conta([joao], 1, 1000)
-print(vars(conta1))
-conta2 = ContaEspecial([maria, joao], 2, 500, 1000)
-print(vars(conta2))
-conta1.saque(50)
-conta2.deposito(300)
-conta1.saque(190)
-conta2.deposito(95.15)
-conta2.saque(1500)
-conta1.extrato()
-conta2.extrato()
+# joao = Cliente("João da Silva", "777-1234")
+# maria = Cliente("Maria da Silva", "555-4321")
+# conta1 = Conta([joao], 1, 1000)
+# print(vars(conta1))
+# conta2 = ContaEspecial([maria, joao], 2, 500, 1000)
+# print(vars(conta2))
+# conta1.saque(50)
+# conta2.deposito(300)
+# conta1.saque(190)
+# conta2.deposito(95.15)
+# conta2.saque(1500)
+# conta1.extrato()
+# conta2.extrato()
+
+
+class Cachorro:
+    def __init__(self, nome, raca, peso, patas=4):
+        self.nome = nome
+        self.raca = raca
+        self.peso = peso
+        self.patas = patas
+        self.racao_dia = []
+
+    def vocaliza(self):
+        if self.peso <= 10:
+            print(f'{self.nome} diz :au au au')
+        else:
+            print(f'{self.nome} diz: WOOF WOOF')
+
+    def quantidade_racao(self):
+        if self.peso <= 5:
+            self.racao_dia.append(95)
+        elif 5 < self.peso <= 10:
+            self.racao_dia.append(150)
+        else:
+            self.racao_dia.append(200)
+
+
+class Gato(Cachorro):
+    def __init__(self, nome, raca, peso):
+        super().__init__(nome, raca, peso)
+
+    def vocaliza(self):
+        if self.peso <= 10:
+            print(f'{self.nome} diz :miau miau')
+        else:
+            print(f'{self.nome} diz: MIAU MIAU')
+
+
+frida = Cachorro('Frida', 'SRD', 17)
+frida.vocaliza()
+frida.quantidade_racao()
+
+print(frida.racao_dia)
+
+morgana = Gato('Morgana', 'SRD', 5)
+morgana.vocaliza()
+morgana.quantidade_racao()
+print(morgana.racao_dia)
