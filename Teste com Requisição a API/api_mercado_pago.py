@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import io
 import json
-token = 'APP_USR-39567916004755-030723-e85b528babb1ea693b2ebc1e16ad61c7-448944834'
+token = ''
 
 headers = {
     'accept': 'application/json',
